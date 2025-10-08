@@ -1,8 +1,13 @@
+let card = []
 
 
-
-let cart = []
-let cartItem=[]
+fetch("https://tholsreymey.github.io/skincare/skincare.json")
+  .then(res => res.json())
+  .then(item => {
+    cart = item
+    Displayproducts()
+  })
+  .catch(err => alert(err))
 // Function Display
 
 const Displayproducts = (products = cart) => {
@@ -23,14 +28,6 @@ const Displayproducts = (products = cart) => {
 
   })
   document.getElementById("show-product").innerHTML = show
-  Updatetocart()
  
 }
 
-fetch("https://tholsreymey.github.io/skincare/skincare.json")
-  .then(res => res.json())
-  .then(item => {
-    cart = item
-    Displayproducts()
-  })
-  .catch(err => alert(err))
