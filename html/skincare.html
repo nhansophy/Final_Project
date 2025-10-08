@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare web</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.cdnfonts.com/css/the-seasons" rel="stylesheet">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/data.css">
+</head>
+<body>
+    <!-- Header -->
+  <nav class="header navbar bg-body-tertiary fixed-top navbar-expand-lg px-md-3">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-2 fw-medium" href="#"><i>Blossom Beauty</i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><i>Blossom Beauty</i></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center gap-3 flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link fs-5" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link fs-5" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 gap-2 mt-md-0 align-items-center" role="search">
+            <input id="input-search" style="height: 35px;" class="form-control mt-2" type="search" placeholder="Search"
+              aria-label="Search" />
+            
+            <div class=" position-relative">
+              <i style="cursor: pointer;" class="bi bi-bag-check fs-3" data-bs-target="#offcanvasScrolling" data-bs-toggle="offcanvas"></i>
+              <div id="cart-count" class="active-cart">0</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Carousel -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://glistenblossom.com/_next/image?url=https%3A%2F%2Fapi.krubkrong.com%2Fcdn%2Fimage%2F297e6d5d-199b-46a1-90a2-6fb6300d2d20.webp&w=1920&q=100" class="d-block w-100 object-fit-cover" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://glistenblossom.com/_next/image?url=https%3A%2F%2Fapi.krubkrong.com%2Fcdn%2Fimage%2Fdb1af0e1-5740-4b8d-9384-3f7eab192a3c.webp&w=1920&q=100" class="d-block w-100 object-fit-cover" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://glistenblossom.com/_next/image?url=https%3A%2F%2Fapi.krubkrong.com%2Fcdn%2Fimage%2Fe5b0ee5f-695d-49c7-ab18-e01f5447ab36.webp&w=1920&q=100" class="d-block w-100 object-fit-cover" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  <div id="menu" class="container-fluid my-5">
+  <!-- Trending on TikTok Line -->
+  <div class="text-center my-5 position-relative">
+    <h4 class="fw-bold text-dark d-inline-block px-3 position-relative trending-title">
+      Trending Skincare
+    </h4>
+  </div>
+
+  <div id="show-product" class="row g-4">
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://skinnora.com/wp-content/uploads/2025/02/SKIN1004-Madagascar-Centella-Probio-Cica-Intensive-Ampoule-30ml.jpg"
+          class="card-img-top img-fixed">
+        <div class="card-body">
+          <h5 class="card-title">skin1004</h5>
+          <p class="card-text">SKIN1004 Madagascar Centella Light Cleansing Oil 6.76 fl.oz, 200ml | Gentle Oil Cleanser for Face, Korean Facial Cleanser, Double Cleansing</p>
+          <p class="fw-bold text-success">15$</p>
+          <button type="button" class="btn btn-warning w-100">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://skinnora.com/wp-content/uploads/2025/02/SKIN1004-Madagascar-Centella-Probio-Cica-Intensive-Ampoule-30ml.jpg"
+          class="card-img-top img-fixed">
+        <div class="card-body">
+          <h5 class="card-title">skin1004</h5>
+          <p class="card-text">SKIN1004 Madagascar Centella Light Cleansing Oil 6.76 fl.oz, 200ml | Gentle Oil Cleanser for Face, Korean Facial Cleanser, Double Cleansing</p>
+          <p class="fw-bold text-success">15$</p>
+          <button type="button" class="btn btn-warning w-100">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXE77a1W3_uh1iygySC9GJU2tPwELkCBCVvwwaV7AKBaRNytS6SmTsy3k_7vPVLCHvRY&usqp=CAU"
+          class="card-img-top img-fixed">
+        <div class="card-body">
+          <h5 class="card-title">skin1004</h5>
+          <p class="card-text">SKIN1004 Madagascar Centella Light Cleansing Oil 6.76 fl.oz, 200ml | Gentle Oil Cleanser for Face, Korean Facial Cleanser, Double Cleansing</p>
+          <p class="fw-bold text-success">15$</p>
+          <button type="button" class="btn btn-warning w-100">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <div class="card h-100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXE77a1W3_uh1iygySC9GJU2tPwELkCBCVvwwaV7AKBaRNytS6SmTsy3k_7vPVLCHvRY&usqp=CAU"
+          class="card-img-top img-fixed">
+        <div class="card-body">
+          <h5 class="card-title">skin1004</h5>
+          <p class="card-text">SKIN1004 Madagascar Centella Light Cleansing Oil 6.76 fl.oz, 200ml | Gentle Oil Cleanser for Face, Korean Facial Cleanser, Double Cleansing</p>
+          <p class="fw-bold text-success">15$</p>
+          <button type="button" class="btn btn-warning w-100">Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="contact" class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- About -->
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">Skincare</h4>
+        <p class="">Welcome to our little Site</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-2">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#menu" class="text-light text-decoration-none">Menu</a></li>
+          <li><a href="#app" class="text-light text-decoration-none">App</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-6 col-md-3">
+        <h5 class="fw-bold">Contact</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt-fill me-2"></i> Phnom Penh, Cambodia</li>
+          <li><i class="bi bi-telephone-fill me-2"></i> +855 96 234 456</li>
+          <li><i class="bi bi-envelope-fill me-2"></i> blossombeauty@gamil.com</li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-12 col-md-3">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="d-flex gap-3 fs-4">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-4 border-light">
+
+    <!-- Bottom Bar -->
+    <div class="text-center pb-3">
+      <p class="mb-0">Copyright &copy; 2025 by <i>Blossom Beauty</i> All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+    
+</body>
+<script src="/js/index.js"></script>
+</html>

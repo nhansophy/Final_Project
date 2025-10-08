@@ -1,0 +1,40 @@
+ body {
+      height: auto;
+      width: 100%;
+       font-family: 'The Seasons', serif;
+    }
+
+    .header {
+      width: 100%;
+      height: 12vh;
+      transition: background 0.3s ease;
+    }
+
+.img-fixed {
+  height: 400px;
+  object-fit: cover;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.btn-warning {
+  background-color: hsl(46, 97%, 47%);
+  border: none;
+  transition: 0.3s;
+}
+.btn-warning:hover {
+  background-color:hsl(46, 97%, 47%);
+}
+ .card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+ 
