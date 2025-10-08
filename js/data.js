@@ -1,5 +1,5 @@
 let cart = []
-fetch("https://tholsreymey.github.io/skincare/skincare.json")
+fetch("https://nhansophy.github.io/project_api/skincare.json")
   .then(res => res.json())
   .then(item => {
     cart = item
