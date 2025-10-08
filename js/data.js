@@ -1,6 +1,4 @@
-let card = []
-
-
+let cart = []
 fetch("https://tholsreymey.github.io/skincare/skincare.json")
   .then(res => res.json())
   .then(item => {
