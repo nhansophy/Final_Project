@@ -19,7 +19,7 @@ const Displayproducts = (products = cart) => {
           <h5 class="card-title">${pro.name}</h5>
           <p class="card-text">${pro.description}</p>
           <p class="fw-bold text-success">${pro.price}$</p>
-          <button  type="button" onclick="AddtoCart(${pro.id})" class="btn btn-warning w-100">Add to cart</button>
+          <button type="button" onclick="AddtoCart(${pro.id})" class="btn btn-light w-100">Order Now</button>
         </div>
       </div>
     </div>`
@@ -28,4 +28,30 @@ const Displayproducts = (products = cart) => {
   document.getElementById("show-product").innerHTML = show
  
 }
+
+// search
+
+document.getElementById("input-search").addEventListener("input", (event) => {
+  const inputserach = event.target.value.toLowerCase();
+  const finds = cart.filter(item => {
+    return item.name.toLowerCase().includes(inputserach)
+  })
+  if (finds.length > 0) {
+    Displayproducts(finds)
+  } else {
+    document.getElementById("show-product").innerHTML = `
+        <div class=" w-100">
+<h1  class=" text-danger text-center">Search Is Not Found...!</h1>
+</div>
+      `
+  }
+})
+
+
+
+
+
+
+
+
 
