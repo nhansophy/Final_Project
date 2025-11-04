@@ -4,17 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skincare Web</title>
-
-  <!-- Bootstrap CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-  <!-- Custom Font -->
   <link href="https://fonts.cdnfonts.com/css/the-seasons" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -81,11 +74,22 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <!-- Cart Sidebar (Offcanvas) -->
+   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasScrolling" data-bs-scroll="true">
+     <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+     </div>
+    <div class="offcanvas-body" id="cart-item">
+       <p>Your Cart Is Empty</p>
+    </div>
+  </div>
+
 
   <!-- Menu Section -->
   <div id="menu" class="container-fluid my-5">
     <div class="text-center my-5">
-      <h2><span></span> Trending Skincare <span></span></h2>
+      <h2> <span></span>Trending Skincare<span></span> </h2>
     </div>
     <div id="show-product" class="row g-4"></div>
   </div>
@@ -162,8 +166,8 @@
       <div class="brand"><img src="https://beautybar.com.ph/cdn/shop/articles/skin1004_blog.jpg?v=1595328325" alt="Skin1004"></div>
     </div>
    </section>
-   <!--Map-->
-  <main class="container my-5">
+    <!-- message form -->
+   <main class="container my-5">
   <div class="row justify-content-center align-items-start gx-4">
     <!-- Contact Form -->
     <div class="col-lg-5 col-md-6 col-12 d-flex">
@@ -184,7 +188,6 @@
         </form>
       </div>
     </div>
-
     <!-- Map -->
     <div class="col-lg-5 col-md-6 col-12">
       <div class="map shadow-lg rounded mb-4">
@@ -192,59 +195,78 @@
       </div>
     </div>
   </div>
+</main>
 
-  <!-- Footer -->
-  <footer id="contact" class="bg-dark text-light pt-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <h4 class="fw-bold">Skincare</h4>
-          <p>Welcome to our little site</p>
-        </div>
-        <div class="col-6 col-md-2">
-          <h5 class="fw-bold">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-            <li><a href="#menu" class="text-light text-decoration-none">Menu</a></li>
-            <li><a href="#app" class="text-light text-decoration-none">App</a></li>
-            <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3">
-          <h5 class="fw-bold">Contact</h5>
-          <ul class="list-unstyled">
-            <li><i class="bi bi-geo-alt-fill me-2"></i> Phnom Penh, Cambodia</li>
-            <li><i class="bi bi-telephone-fill me-2"></i> +855 96 234 456</li>
-            <li><i class="bi bi-envelope-fill me-2"></i> blossombeauty@gmail.com</li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-3">
-          <h5 class="fw-bold">Follow Us</h5>
-          <div class="d-flex gap-3 fs-4">
-            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
-          </div>
+
+    <!-- Footer -->
+<footer id="contact" class=" w-100 bg-dark text-light">
+  <div class="container px-0">
+    
+    <div class="row g-4 w-100 mx-0"> 
+      <div class="col-12 col-md-4">
+        <h4 class="fw-bold">Skincare</h4>
+        <p>Welcome to our little site</p>
+      </div>
+
+      <div class="col-6 col-md-2">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#menu" class="text-light text-decoration-none">Menu</a></li>
+          <li><a href="#app" class="text-light text-decoration-none">App</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <h5 class="fw-bold">Contact</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt-fill me-2"></i> Phnom Penh, Cambodia</li>
+          <li><i class="bi bi-telephone-fill me-2"></i> +855 96 234 456</li>
+          <li><i class="bi bi-envelope-fill me-2"></i> blossombeauty@gmail.com</li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-3">
+        <h5 class="fw-bold">Follow Us</h5>
+        <div class="d-flex gap-3 fs-4">
+          <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
-      <hr class="my-4 border-light">
+    </div>
+
+    <hr class="my-4 border-light mx-0">
+
+    <div class="text-center mt-4">
+      <div class="d-flex justify-content-center align-items-center gap-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" style="height:50px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" style="height:50px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5rhhK6J-1NLGEwAM6-EI4f5qc3tZtWgBhbheq_VqryrmVx9S70Dvf712If6G_i61lDtYq_KXJSfLu-EKL_z6jGGhIHm3JIXYemRRJRJKaXY_R-1_nIIwpeoaYX4gkZSih5WTks84WJpxR/w1200-h630-p-k-no-nu/iBanking-AbaBank1.jpg" alt="ABA" style="height:50px;">
+      </div>
+
       <div class="text-center pb-3">
         <p class="mb-0">Copyright &copy; 2025 by <i>Blossom Beauty</i> All Rights Reserved.</p>
       </div>
     </div>
-  </footer>
 
+  </div>
+</footer>
+
+    
 
 </body>
   <script src="js/data.js"></script>
   <script src="/jquery/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- ilter-link-active -->
 <script>
-  var selector = ".new-p-heading li"
-   $(selector).on('click',function(){
-     $(selector).removeClass('active')
-     $(this).addClass(active)
-});
+  var selector = ".new-p-heading li";
+  $(selector).on('click', function() {
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+  });
 </script>
 </html>
