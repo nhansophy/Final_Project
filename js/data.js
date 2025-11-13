@@ -12,7 +12,7 @@ fetch("https://nhansophy.github.io/project_api/skincare.json")
 const Displayproducts = (products = cart) => {
   let show = ``
   products.forEach(pro => {
-    show += ` <div class="col-12 col-sm-6 col-md-3">
+    show += ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
       <div class="card h-100">
         <img src="${pro.image}"
           class="card-img-top img-fixed" alt="Cappuccino">
@@ -29,6 +29,27 @@ const Displayproducts = (products = cart) => {
   document.getElementById("show-product").innerHTML = show
  
 }
+// const DisplayNewProducts = (products = newProducts) => {
+//   let show = "";
+//   products.forEach(p => {
+//     show += `
+//       <div class="new-product-box">
+//         <a href="#" class="new-product-img">
+//           <img src="${p.image}" alt="${p.name}">
+//           <span>New arrival</span>
+//         </a>
+//         <div class="new-product-text">
+//           <p class="new-product-title">${p.name}</p>
+//           <span>$${p.price}</span>
+//           <button type="button" onclick="AddtoCart(${p.id})" class="btn btn-light w-100">Order Now</button>
+//         </div>
+//       </div>
+//     `;
+//   });
+//   document.querySelector(".new-product-container").innerHTML = show;
+// }
+
+
 
 // search
 
