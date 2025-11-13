@@ -160,11 +160,11 @@ body {
   object-fit: cover;
 }
 
-#new_products {
+ #new_products {
   max-width: 1200px;
   width: 100%;
-  margin: 50px auto;
-}
+  margin: 10px auto;
+} 
 
 .new-p-heading {
   display: flex;
@@ -183,49 +183,8 @@ body {
   font-weight: 800;
   margin: 0 auto;
   text-align: center;
-}
+} 
 
-.new-p-heading li.active {
-  background-color: #8fdb50;
-}
-
-/* === PRODUCT MENU BUTTONS (same size, centered, responsive) === */
-.new-p-heading ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  list-style: none;
-  margin: 10px 0 0 0;
-  padding: 0;
-  width: 100%;
-}
-
-.new-p-heading ul li {
-  background-color: #ffffff;
-  border: 2px solid #8fdb50;
-  color: #2b2b2b;
-  font-weight: 600;
-  border-radius: 8px;
-  width: 140px;         /* all buttons same width */
-  height: 42px;         /* all buttons same height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.new-p-heading ul li:hover,
-.new-p-heading ul li.active {
-  background-color: #8fdb50;
-  color: #fff;
-  border-color: #8fdb50;
-}
-
-/* Smaller screens — buttons resize */
 @media (max-width: 768px) {
   .new-p-heading ul li {
     width: 110px;
@@ -234,8 +193,6 @@ body {
   }
 }
 
-
-/* ✅ updated for uniform buttons */
 .new-product-box {
   max-width: 100%;
   width: 100%;
@@ -246,7 +203,7 @@ body {
   padding: 10px;
   margin-top: 20px;
   border: 1px solid rgb(189, 187, 187);
-  min-height: 460px; /* keeps cards same height */
+  min-height: 460px; 
 }
 
 
@@ -263,7 +220,7 @@ body {
   position: absolute;
   left: 5px;
   top: 1px;
-  background-color: #f57183;
+  background-color: #eb0423;
   color: #ffffff;
   padding: 3px 10px;
   font-weight: 600;
@@ -330,10 +287,9 @@ body {
 
 /* RESPONSIVE DESIGN TWEAKS */
 
-/* Extra small devices (phones, <576px) */
 @media (max-width: 575.98px) {
   .navbar-brand {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   #input-search {
@@ -341,7 +297,7 @@ body {
   }
 
   .carousel-item img {
-    height: 220px;
+    height: 210px;
     object-fit: cover;
   }
 
@@ -400,14 +356,12 @@ body {
     font-size: 10px;
   }
 
-  /* ✅ smaller button on mobile */
   .new-product-box .btn-light {
     font-size: 0.9rem;
     padding: 8px 0;
   }
 }
 
-/* Small devices (landscape phones and small tablets, 576px - 767px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .new-product-container {
     grid-template-columns: 1fr 1fr;
@@ -422,7 +376,6 @@ body {
   }
 }
 
-/* Medium devices (tablets, 768px - 991px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .new-product-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -441,7 +394,6 @@ body {
   }
 }
 
-/* Large devices (desktops, 992px - 1199px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .new-product-container {
     grid-template-columns: repeat(3, 1fr);
