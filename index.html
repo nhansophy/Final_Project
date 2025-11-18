@@ -101,6 +101,36 @@
     <div id="show-product" class="row g-4"></div>
   </div>
 
+  <!-- Product detail -->
+<div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 id="modal-title" class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="modal-image" class="img-fluid rounded" />
+          </div>
+          <div class="col-md-6">
+            <p id="modal-description" class="mt-2"></p>
+            <h4 id="modal-price" class="text-success fw-bold"></h4>
+
+            <button id="modal-add-btn" class="btn btn-dark w-100 mt-3">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
     <!-- New-product -->
      <section id="new_products">
       <!-- Heading -->

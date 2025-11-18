@@ -1,12 +1,33 @@
 let cart = []
 let cartItem=[]
-fetch("https://nhansophy.github.io/project_api/skincare.json")
+fetch('https://nhansophy.github.io/project_api/skincare.json')
   .then(res => res.json())
   .then(item => {
     cart = item
     Displayproducts()
   })
   .catch(err => alert(err))
+
+  // Show product details in modal
+const ShowDetail = (productId) => {
+  const pro = cart.find(p => p.id === productId);
+  if (!pro) return;
+
+  document.getElementById("modal-title").innerText = pro.name;
+  document.getElementById("modal-image").src = pro.image;
+  document.getElementById("modal-description").innerText = pro.description;
+  document.getElementById("modal-price").innerText = pro.price + "$";
+
+  // Add to cart button
+  document.getElementById("modal-add-btn").onclick = () => {
+    AddtoCart(productId);
+  };
+
+  // Show modal
+  const modal = new bootstrap.Modal(document.getElementById("productModal"));
+  modal.show();
+};
+
 // Function Display
 
 const Displayproducts = (products = cart) => {
@@ -14,11 +35,12 @@ const Displayproducts = (products = cart) => {
   products.forEach(pro => {
     show += ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex mb-4">
       <div class="card h-100">
-        <img src="${pro.image}"
-          class="card-img-top img-fixed" alt="Cappuccino">
+         <img src="${pro.image}" 
+           onclick="ShowDetail(${pro.id})"
+           class="card-img-top img-fixed" style="cursor:pointer" alt="${pro.name}">
         <div class="card-body">
           <h5 class="card-title">${pro.name}</h5>
-          <p class="card-text">${pro.description}</p>
+          <p class="card-text">${pro.description.slice(0,114)}</p>
           <p class="fw-bold text-success">${pro.price}$</p>
           <button type="button" onclick="AddtoCart(${pro.id})" class="btn btn-light w-100">Order Now</button>
         </div>
