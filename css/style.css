@@ -2,8 +2,6 @@ body {
   height: auto;
   width: 100%;
   font-family: 'The Seasons', serif;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -202,6 +200,8 @@ body {
   background-color: white;
   padding: 10px;
   margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   border: 1px solid rgb(189, 187, 187);
   min-height: 460px; 
 }
@@ -285,7 +285,7 @@ body {
   width: 100%;
 }
 
-/* RESPONSIVE DESIGN TWEAKS */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 575.98px) {
   .navbar-brand {
@@ -307,19 +307,15 @@ body {
     flex-direction: column;
     gap: 8px;
   }
-
   .new-product-container {
     grid-template-columns: 1fr;
   }
-
   .new-product-img {
     height: 250px;
   }
-
   .new-p-heading h3 {
     font-size: 1.3rem;
   }
-
   .brands-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -329,33 +325,26 @@ body {
     width: 100%;
     height: 70px;
   }
-
   .responsive-contact {
     height: auto;
   }
-
   iframe {
     height: 300px;
   }
-
   footer {
     text-align: center;
   }
-
   footer .row > div {
     margin-bottom: 15px;
   }
-
   footer img {
     height: 40px !important;
   }
-
   #cart-count {
     top: -4px;
     right: -5px;
     font-size: 10px;
   }
-
   .new-product-box .btn-light {
     font-size: 0.9rem;
     padding: 8px 0;
@@ -363,17 +352,14 @@ body {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .new-product-container {
-    grid-template-columns: 1fr 1fr;
-  }
 
   .brands-container {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
 
   .new-product-img {
     height: 280px;
-  }
+   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -384,7 +370,6 @@ body {
   .brands-container {
     grid-template-columns: repeat(4, 1fr);
   }
-
   .brand {
     height: 90px;
   }
@@ -404,6 +389,22 @@ body {
   }
 
   .carousel-item img {
-    height: 380px;
+    height: 300px;
   }
 }
+
+ /* Make modal smaller */
+  #productModal .modal-dialog {
+    max-width: 90% ;
+    margin: 5px auto;
+  }
+
+
+  #productModal img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #modal-description {
+    font-size: 14px;
+  }
